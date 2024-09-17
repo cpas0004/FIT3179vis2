@@ -17,12 +17,13 @@
           "lookup": "properties.STATE_NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/fires.csv"
+              "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/area_burned_data.csv"
             },
             "key": "State",
-            "fields": ["Fires"]
+            "fields": ["Size", "Burned Area"]
           }
-        }
+        },
+        {"calculate": "datum.Burned Area/datum.Size * 100", "as": "% of State Damaged by Fires"}
       ],
       "mark": {
         "type": "geoshape",
@@ -30,17 +31,18 @@
       },
       "encoding": {
         "color": {
-          "field": "Fires",
+          "field": "% of State Damaged by Fires",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
-            "domain": [1, 5, 10, 20],
+            "domain": [0.5, 1, 5, 10],
             "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
           }
         },
         "tooltip": [
           {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
-          {"field": "Fires", "type": "quantitative"}
+          {"field": "% of State Damaged by Fires", "type": "quantitative"},
+          {"field": "Burned Area", "type": "quantitative", "title": "Total area burned in km^2"}
         ]
       }
     },
