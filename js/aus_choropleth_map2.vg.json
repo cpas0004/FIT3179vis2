@@ -5,7 +5,7 @@
   "height": 400,
   "projection": {"type": "equalEarth"},
   "data": {
-    "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/js/au-states-topo.topojson",
+    "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/js/states.topojson",
     "format": {"type": "topojson", "feature": "states"}
   },
   "mark": {"type": "geoshape"}
