@@ -3,7 +3,7 @@
   "title": "Number of Fires in Australia",
   "width": 800,
   "height": 400,
-  "projection": {"type": "equalEarth"},
+  "projection": {"type": "mercator"},
 
   "data": {
     "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/js/states.topojson",
@@ -21,7 +21,7 @@
       }
     }
   ],
-  "mark": {"type": "geoshape"},
+  "mark": {"type": "geoshape", "stroke": "lightgrey", "strokeWidth":0.5},
   "encoding": {
     "color": {
       "field": "Fires",
