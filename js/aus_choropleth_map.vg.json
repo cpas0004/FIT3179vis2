@@ -10,7 +10,7 @@
   },
   "transform": [
     {
-      "lookup": "properties.NAME",
+      "lookup": "properties.STATE_NAME",
       "from": {
         "data": {
           "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/data/covid_10_10_2020.csv"
