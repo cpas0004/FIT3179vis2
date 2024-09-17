@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "COVID-19 Confirmed Cases per 10,000 population (10 Oct 2020)",
+  "title": "Number of Fires in Australia",
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth"},
@@ -13,30 +13,27 @@
       "lookup": "properties.STATE_NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/data/covid_10_10_2020.csv"
+          "url": "https://github.com/cpas0004/FIT3179vis2/blob/main/data/fires.csv"
         },
-        "key": "Country",
-        "fields": ["Active", "Confirmed", "Deaths", "Population"]
+        "key": "State",
+        "fields": ["Fires"]
       }
-
-    },
-    {"calculate": "datum.Confirmed/datum.Population * 10000", "as": "Confirmed per 10,000 population"}
+    }
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Confirmed per 10,000 population",
+      "field": "Number of Fires",
       "type": "quantitative",
       "scale": {
         "type": "threshold",
-        "domain": [1, 10, 100],
+        "domain": [1, 5, 10, 20],
         "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
       }
     },
     "tooltip": [
-      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-      {"field": "Confirmed", "type": "quantitative"},
-      {"field": "Confirmed per 10,000 population", "type": "quantitative", "format": ".2f"}
+      {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
+      {"field": "Fires", "type": "quantitative"}
     ]
   }
  }
