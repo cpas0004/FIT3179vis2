@@ -5,7 +5,7 @@
   "height": 400,
   "projection": {"type": "equalEarth"},
   "data": {
-    "url": "https://github.com/cpas0004/FIT3179vis2/blob/main/js/AusStates.json",
+    "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/js/AusStates.json",
     "format": {"type": "json"}
   },
   "transform": [
@@ -13,7 +13,7 @@
       "lookup": "properties.STATE_NAME",
       "from": {
         "data": {
-          "url": "https://github.com/cpas0004/FIT3179vis2/blob/main/data/fires.csv"
+          "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/fires.csv"
         },
         "key": "State",
         "fields": ["Fires"]
@@ -23,7 +23,7 @@
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Number of Fires",
+      "field": "Fires",
       "type": "quantitative",
       "scale": {
         "type": "threshold",
@@ -36,4 +36,4 @@
       {"field": "Fires", "type": "quantitative"}
     ]
   }
- }
+}
