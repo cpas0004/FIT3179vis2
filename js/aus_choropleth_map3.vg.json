@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Number of Fires in Australia",
+  "title": "% of Each State Damaged by Bushfires in the 2019/20 Summer",
   "width": 800,
   "height": 400,
   "projection": {"type": "mercator"},
@@ -20,10 +20,10 @@
               "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/area_burned_data.csv"
             },
             "key": "State",
-            "fields": ["Size", "Burned Area"]
+            "fields": ["Size", "Burned"]
           }
         },
-        {"calculate": "datum.Burned Area/datum.Size * 100", "as": "% of State Damaged by Fires"}
+        {"calculate": "datum['Burned']/datum['Size'] * 100", "as": "% of State Damaged by Fires"}
       ],
       "mark": {
         "type": "geoshape",
@@ -33,16 +33,17 @@
         "color": {
           "field": "% of State Damaged by Fires",
           "type": "quantitative",
+          "title": "%",
           "scale": {
             "type": "threshold",
-            "domain": [0.5, 1, 5, 10],
+            "domain": [1, 5, 10],
             "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
           }
         },
         "tooltip": [
           {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
-          {"field": "% of State Damaged by Fires", "type": "quantitative"},
-          {"field": "Burned Area", "type": "quantitative", "title": "Total area burned in km^2"}
+          {"field": "% of State Damaged by Fires", "type": "quantitative", "format": ".2f"},
+          {"field": "Burned", "type": "quantitative", "title": "Total area burned in km^2", "format": ".0f"}
         ]
       }
     },
