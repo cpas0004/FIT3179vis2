@@ -4,9 +4,10 @@
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth"},
+
   "data": {
-    "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/js/AusStates.json",
-    "format": {"type": "json"}
+    "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/js/states.topojson",
+    "format": {"type": "topojson", "feature": "states"}
   },
   "transform": [
     {
