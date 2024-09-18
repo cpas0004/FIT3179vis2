@@ -1,8 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "% of Each State Damaged by Bushfires in the 2019/20 Summer",
-  "width": 800,
-  "height": 400,
+  "title": {
+    "text": "% of Each State's Land Damaged by Bushfires in the 2019/20 Summer",
+    "fontSize": 24     
+  },
+  "width": 900,
+  "height": 600,
   "projection": {"type": "mercator"},
 
   "layer": [
@@ -23,7 +26,15 @@
             "fields": ["Size", "Burned"]
           }
         },
-        {"calculate": "datum['Burned']/datum['Size'] * 100", "as": "% of State Damaged by Fires"}
+        {"calculate": "datum['Burned']/datum['Size'] * 100", "as": "% of State Damaged by Fires"},
+        {
+          "calculate": "datum['properties.STATE_NAME'] === 'Northern Territory' ? 'No bushfire data available' : format(datum['% of State Damaged by Fires'], '.2f') + '%'", 
+          "as": "Tooltip % of State Damaged"
+        },
+        {
+          "calculate": "datum['properties.STATE_NAME'] === 'Northern Territory' ? 'No data for burned area' : format(datum['Burned'], ',.0f')", 
+          "as": "Tooltip Burned Area"
+        }
       ],
       "mark": {
         "type": "geoshape",
@@ -42,8 +53,8 @@
         },
         "tooltip": [
           {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
-          {"field": "% of State Damaged by Fires", "type": "quantitative", "format": ".2f"},
-          {"field": "Burned", "type": "quantitative", "title": "Total area burned in km^2", "format": ".0f"}
+          {"field": "Tooltip % of State Damaged", "type": "nominal", "title": "% of State Damaged by Fires"},
+          {"field": "Tooltip Burned Area", "type": "nominal", "title": "Total area burned in km^2"}
         ]
       }
     },
@@ -73,7 +84,7 @@
           "field": "area_km",
           "type": "quantitative",
           "title": "Area in km^2",
-          "scale": {"domain": [100, 6000]}
+          "scale": {"domain": [400, 3000, 6000]}
         },
         "color": {
           "field": "area_km",
