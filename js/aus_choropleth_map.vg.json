@@ -6,7 +6,7 @@
   "projection": {"type": "mercator"},
 
   "data": {
-    "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/js/states.topojson",
+    "url": "https://raw.githubusercontent.com/cpas0004/FIT3179hw9/main/js/states.topojson",
     "format": {"type": "topojson", "feature": "states"}
   },
   "transform": [
@@ -14,7 +14,7 @@
       "lookup": "properties.STATE_NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/fires.csv"
+          "url": "https://raw.githubusercontent.com/cpas0004/FIT3179hw9/main/data/fires.csv"
         },
         "key": "State",
         "fields": ["Fires"]
