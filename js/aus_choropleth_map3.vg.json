@@ -63,6 +63,28 @@
     },
     {
       "data": {
+        "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/top50.csv"
+      },
+      "mark": {"type": "circle", "tooltip": {"content": "data"}},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "size": {
+          "field": "area_km",
+          "type": "quantitative",
+          "title": "Area in km^2",
+          "scale": {"domain": [100, 6000]}
+        },
+        "color": {
+          "field": "area_km",
+          "type": "quantitative",
+          "title": "Area in km^2",
+          "scale": {"scheme": "yellowgreen"}
+        }
+      }
+    },
+    {
+      "data": {
         "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/js/ne_110m_graticules_5.topojson",
         "format": {"type": "topojson", "feature": "ne_110m_graticules_5"}
       },
