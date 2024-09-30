@@ -58,8 +58,8 @@
           "title": "%",
           "scale": {
             "type": "threshold",
-            "domain": [1, 5, 10],
-            "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+            "domain": [0.01, 1, 5, 10],
+            "range": ["#D3D3D3", "#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
           }
         },
         "tooltip": [
