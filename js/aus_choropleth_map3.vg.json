@@ -7,7 +7,18 @@
   "width": 900,
   "height": 600,
   "projection": {"type": "mercator"},
-
+  "params": [
+        {
+          "name": "TopFires", 
+          "value":  50, 
+          "bind": { 
+          "input": "range", 
+          "min": 1, 
+          "max": 50, 
+          "step": 1, 
+          "name": "Top Fires: "}
+        }
+      ],
   "layer": [
     {
       
@@ -76,6 +87,10 @@
       "data": {
         "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/top50.csv"
       },
+      
+      "transform": [
+        {  "filter": "datum.rank <= TopFires"}
+      ],
       "mark": {"type": "circle", "tooltip": {"content": "data"}},
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
@@ -84,7 +99,7 @@
           "field": "area_km",
           "type": "quantitative",
           "title": "Area in km^2",
-          "scale": {"domain": [400, 3000, 6000]}
+          "scale": {"domain": [100, 900, 4000]}
         },
         "color": {
           "field": "area_km",
