@@ -10,6 +10,12 @@
         "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/ignition.csv",
         "format": {"type": "csv"}
     },
+    "transform": [
+        {
+            "calculate": "format(datum.Percent, '.0f') + '%'", 
+            "as": "FormattedPercent"
+        }
+    ],
     "encoding": {
                 "theta": {"field": "Percent", "type": "quantitative", "stack": true},
                 "color": {
@@ -50,8 +56,8 @@
             },
             "encoding": {
                 "text": {
-                    "field": "Percent", 
-                    "type": "quantitative"
+                    "field": "FormattedPercent", 
+                    "type": "nominal"
                 },
                 "color": {"value": "white"}
             }
