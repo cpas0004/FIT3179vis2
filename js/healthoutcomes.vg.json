@@ -140,7 +140,10 @@
                     "field": "State",
                     "type": "nominal",
                     "legend": {"title": "State"},
-                    "sort": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT"]
+                    "scale": {
+                        "range": ["#c9462a", "#d2a665", "#652b22", "#90ae85",  "#fca404", "#a3512f", "#ac545c", "#414524"]
+                    },
+                    "sort": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "ACT", "NT"]
                 },
                 "opacity"  : { 
                     "condition": {"selection": "state_highlight", "value": 0.9}, 

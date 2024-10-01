@@ -22,7 +22,7 @@
                     "field": "Cause", 
                     "type": "nominal", 
                     "scale": {
-                        "range": ["#c9462a", "#d2a665", "#652b22", "#90ae85",  "orange", "#a3512f"]
+                        "range": ["#c9462a", "#d2a665", "#652b22", "#90ae85",  "#fca404", "#a3512f"]
                     },
                     "legend": null
                 },
