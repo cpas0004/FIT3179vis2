@@ -1,0 +1,212 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Dispensed respiratory medications per state during the 2019/20 bushfires",
+        "fontSize": 24
+    },
+    "width": 900,
+    "height": 600,
+    "data": {
+        "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/dispensed.csv",
+        "format": {"type": "csv", "parse": {"Date": "date:'%d/%m/%Y'"}}
+    },
+    "transform": [
+        {
+            "calculate": "'Week ending ' + timeFormat(datum.Date, '%d/%m/%Y')",
+            "as": "WeekEnding"
+        },
+        {
+            "calculate": "datetime('2019-11-09')",
+            "as": "StartDate"
+        },
+        {
+            "calculate": "datetime('2020-01-12')",
+            "as": "EndDate"
+        },
+        {
+            "calculate": "datetime('2019-12-21')",
+            "as": "PeakDate"
+        },
+        {
+            "calculate": "datetime('2019-11-11')",
+            "as": "anno1X"
+        },
+        {
+            "calculate": "117000",
+            "as": "anno1Y"
+        },
+        {
+            "calculate": "datetime('2019-12-23')",
+            "as": "anno2X"
+        },
+        {
+            "calculate": "35000",
+            "as": "anno2Y"
+        }
+    ],
+    "layer": [
+        {
+            "mark": {
+                "type": "rect",
+                "fill": "#d9d9d9",
+                "fillOpacity": 0.02
+            },
+            "encoding": {
+                "x": {
+                    "field": "StartDate", 
+                    "type": "temporal"
+                },
+                "x2": {
+                    "field": "EndDate"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "rule",
+                "stroke": "darkgray",
+                "strokeWidth": 2,
+                "opacity": 0.7,
+                "strokeDash": [5, 7]
+            },
+            "encoding": {
+                "x": {
+                    "field": "StartDate",
+                    "type": "temporal"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "rule",
+                "stroke": "darkgray",
+                "strokeWidth": 2,
+                "opacity": 0.7,
+                "strokeDash": [5, 7]
+            },
+            "encoding": {
+                "x": {
+                    "field": "EndDate",
+                    "type": "temporal"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "rule",
+                "stroke": "red",
+                "strokeWidth": 2,
+                "opacity": 0.7,
+                "strokeDash": [5, 7]
+            },
+            "encoding": {
+                "x": {
+                    "field": "PeakDate",
+                    "type": "temporal"
+                }
+            }
+        },
+        {
+            "selection": { 
+                "state_highlight"  : { 
+                  "type": "multi",
+                  "fields": ["State"], 
+                  "bind": "legend"
+              } 
+            }, 
+            "mark": {
+                "type": "line",
+                "point": true,
+                "strokeWidth": 2.5
+            },
+            "encoding": {
+                "x": {
+                    "field": "Date",
+                    "type": "temporal",
+                    "axis": {
+                        "title": "Date",
+                        "titleFontSize": 15
+                    }
+                },
+                "y": {
+                    "field": "Dispensed",
+                    "type": "quantitative",
+                    "axis": {
+                        "title": "Dispensed Respiratory Prescriptions",
+                        "titleFontSize": 15
+                    }
+                },
+                "color": {
+                    "field": "State",
+                    "type": "nominal",
+                    "legend": {"title": "State"},
+                    "sort": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT"]
+                },
+                "opacity"  : { 
+                    "condition": {"selection": "state_highlight", "value": 0.9}, 
+                    "value": 0.2 
+                },
+                "tooltip": [
+                    {"field": "WeekEnding", "type": "nominal", "title": "Date"},
+                    {"field": "State", "type": "nominal", "title": "State"},
+                    {
+                        "field": "Dispensed",
+                        "type": "quantitative",
+                        "title": "Dispensed Respiratory Prescriptions",
+                        "format": ",d"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "fontSize": 16,
+                "fontWeight": 100,
+                "color": "black",
+                "align": "left",
+                "baseline": "middle"
+            },
+            "encoding": {
+                "x": {
+                    "field": "anno1X", 
+                    "type": "temporal" 
+                },
+                "y": {
+                    "field": "anno1Y", 
+                    "type": "quantitative"
+                },
+                "text": {
+                    "value": "2019/20 Bushfire Season"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "fontSize": 16,
+                "fontWeight": 100,
+                "color": "red",
+                "align": "left",
+                "baseline": "middle"
+            },
+            "encoding": {
+                "x": {
+                    "field": "anno2X", 
+                    "type": "temporal" 
+                },
+                "y": {
+                    "field": "anno2Y", 
+                    "type": "quantitative"
+                },
+                "text": {
+                    "value": "Prescriptions peaked during the bushfires"
+                }
+            }
+        }
+        
+        
+        
+        
+    ]
+}

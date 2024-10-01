@@ -22,5 +22,14 @@
   }).catch(console.error);
 </script>
 
+<div id="respiratory_prescriptions"></div>
+<script type="text/javascript">
+
+  var spec2 = "js/healthoutcomes.vg.json";
+  vegaEmbed('#respiratory_prescriptions', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
 </body>
 </html>
