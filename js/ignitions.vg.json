@@ -10,13 +10,50 @@
         "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/ignition.csv",
         "format": {"type": "csv"}
     },
-    
+    "encoding": {
+                "theta": {"field": "Percent", "type": "quantitative", "stack": true},
+                "color": {
+                    "field": "Cause", 
+                    "type": "nominal", 
+                    "scale": {
+                        "range": ["#c9462a", "#d2a665", "#652b22", "#90ae85",  "orange", "#a3512f"]
+                    },
+                    "legend": null
+                },
+                "order": {"field": "Percent", "type": "quantitative", "sort": "descending"}
+    },
     "layer": [
         {
-            "mark": "arc",
+            "mark": {
+                "type": "arc",
+                "outerRadius": 200
+            }
+        },
+        {
+            "mark": {
+                "type": "text", 
+                "radius": 237,
+                "fontSize": 16
+            },
             "encoding": {
-                "theta": {"field": "Percent", "type": "quantitative"},
-                "color": {"field": "Cause", "type": "nominal"}
+                "text": {
+                    "field": "Cause", 
+                    "type": "nominal"
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text", 
+                "radius": 160,
+                "fontSize": 18
+            },
+            "encoding": {
+                "text": {
+                    "field": "Percent", 
+                    "type": "quantitative"
+                },
+                "color": {"value": "white"}
             }
         }
         
