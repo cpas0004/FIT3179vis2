@@ -12,6 +12,11 @@
 	bottom: 100px; 
 	left: 100px;
 	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+}
+
+#ignitions {
+	top:40px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
 }

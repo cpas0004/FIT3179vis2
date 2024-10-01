@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Classifications of Bushfire Ignitions Since 2000",
+        "fontSize": 24
+    },
+    "width": 600,
+    "height": 450,
+    "data": {
+        "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/ignition.csv",
+        "format": {"type": "csv"}
+    },
+    
+    "layer": [
+        {
+            "mark": "arc",
+            "encoding": {
+                "theta": {"field": "Percent", "type": "quantitative"},
+                "color": {"field": "Cause", "type": "nominal"}
+            }
+        }
+        
+    ]
+}
