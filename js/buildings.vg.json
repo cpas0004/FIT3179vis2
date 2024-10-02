@@ -2,10 +2,10 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
         "text": "NSW Buildings Destroyed in 2019/20 Bushfires",
-        "fontSize": 24
+        "fontSize": 16
     },
-    "width": 600,
-    "height": 450,
+    "width": 275,
+    "height": 275,
     "data": {
         "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/buildings.csv",
         "format": {"type": "csv"}
@@ -14,12 +14,62 @@
         {
             "mark": "bar",
             "encoding": {
-                "x": {"field": "Category"},
-                "y": {"field": "Value", "type": "quantitative"},
+                "x": {
+                    "field": "Category",
+                    "type": "nominal",
+                    "title": "Building Type",
+                    "axis": {"labelAngle": 0},
+                    "sort": "descending"
+                },
+                "y": {
+                    "field": "Value", 
+                    "type": "quantitative",
+                    "title": "Number of Buildings"
+                },
                 "xOffset": {"field": "Group"},
-                "color": {"field": "Group"}
+                "color": {
+                    "field": "Group",
+                    "type": "nominal",
+                    "scale": {
+                        "range": ["#c9462a", "#652b22"]
+                    },
+                    "legend": {
+                        "title": null,
+                        "orient": "top-left",  
+                        "labelFontSize": 14,    
+                        "symbolSize": 200
+                    }
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "dy": -10,
+                "fontSize": 12,
+                "color": "black"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Category",
+                    "type": "nominal"
+                    
+                },
+                "xOffset": {"field": "Group"},
+                "y": {
+                    "field": "Value",
+                    "type": "quantitative"
+                },
+                "text": {
+                    "field": "Value",  
+                    "type": "quantitative"
+                },
+                "color": {
+                    "value": "black"
+                }
             }
         }
+        
         
     ]
 }

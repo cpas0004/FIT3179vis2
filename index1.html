@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
+</head>
+<body>
+
+<div id="choropleth_map"></div>
+<script type="text/javascript">
+
+  var spec2 = "js/aus_choropleth_map3.vg.json";
+  vegaEmbed('#choropleth_map', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+<div id="respiratory_prescriptions"></div>
+<script type="text/javascript">
+
+  var spec2 = "js/healthoutcomes.vg.json";
+  vegaEmbed('#respiratory_prescriptions', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+<div id="ignitions"></div>
+<script type="text/javascript">
+
+  var spec2 = "js/ignitions.vg.json";
+  vegaEmbed('#ignitions', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+<div id="buildings"></div>
+<script type="text/javascript">
+
+  var spec2 = "js/buildings.vg.json";
+  vegaEmbed('#buildings', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+</body>
+</html>
