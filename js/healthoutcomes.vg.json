@@ -33,7 +33,7 @@
             "as": "anno1X"
         },
         {
-            "calculate": "117000",
+            "calculate": "115000",
             "as": "anno1Y"
         },
         {
@@ -188,7 +188,7 @@
         {
             "mark": {
                 "type": "text",
-                "fontSize": 16,
+                "fontSize": 15,
                 "fontWeight": 100,
                 "color": "red",
                 "align": "left",

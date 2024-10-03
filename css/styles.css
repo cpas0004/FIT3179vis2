@@ -16,22 +16,47 @@
 
 .vis-container {
     width: 100%;
-	padding-top: 17px;
+	padding-top: 1px;
+}
+
+.vis-container2 {
+    width: 100%;
+	padding-top: 20px;
 }
 
 .description-right {
-    padding-left: 5px;
+    padding-right: 5px;
 }
 
-.description-top-left {
-    padding-right: 20px;
+.description-top-left1 {
+    padding-right: 10px;
 	padding-left: 10px;
+	padding-top: 25x;
+	
+}
+
+.aligned-paragraph{
+	text-align: justify;
+  	text-justify: inter-word;
+}
+
+.description-top-left2 {
+	padding-left: 20px;
+	padding-top: 25x;
 }
 
 .description-bottom-left {
     padding-right: 20px;
 	padding-left: 10px;
 	margin-top: 0;
+}
+
+.description-bottom-left {
+    padding-right: 20px;
+	padding-left: 15px;
+	margin-top: 0;
+	text-align: justify;
+  	text-justify: inter-word;
 }
 
 .pure-g {

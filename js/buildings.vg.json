@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
         "text": "NSW Buildings Damaged in 2019/20 Fires",
-        "fontSize": 16
+        "fontSize": 22
     },
     "width": 275,
     "height": 275,
