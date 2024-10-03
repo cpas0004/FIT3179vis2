@@ -48,10 +48,12 @@
 .description-bottom-left {
     padding-right: 20px;
 	padding-left: 10px;
-	margin-top: 0;
+	padding-top: 6px;
+	text-align: justify;
+  	text-justify: inter-word;
 }
 
-.description-bottom-left {
+.description-bottom-right {
     padding-right: 20px;
 	padding-left: 15px;
 	margin-top: 0;
