@@ -6,6 +6,7 @@
     },
     "width": 275,
     "height": 275,
+    "background": "#f9f0db",
     "data": {
         "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/ignition.csv",
         "format": {"type": "csv"}
@@ -32,13 +33,13 @@
         {
             "mark": {
                 "type": "arc",
-                "outerRadius": 200
+                "outerRadius": 160
             }
         },
         {
             "mark": {
                 "type": "text", 
-                "radius": 237,
+                "radius": 180,
                 "fontSize": 16
             },
             "encoding": {
@@ -51,8 +52,8 @@
         {
             "mark": {
                 "type": "text", 
-                "radius": 160,
-                "fontSize": 18
+                "radius": 120,
+                "fontSize": 16
             },
             "encoding": {
                 "text": {
