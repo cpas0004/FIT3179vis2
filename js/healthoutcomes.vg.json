@@ -2,9 +2,9 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
         "text": "Dispensed respiratory medications per state during the 2019/20 bushfires",
-        "fontSize": 24
+        "fontSize": 22
     },
-    "width": 720,
+    "width": 800,
     "height": 270,
     "background": "#f9f0db",
     "data": {

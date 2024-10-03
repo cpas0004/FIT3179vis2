@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-        "text": "Classifications of Bushfire Ignitions Since 2000",
+        "text": "Bushfire Ignitions Since 2000",
         "fontSize": 16
     },
     "width": 275,
@@ -33,14 +33,14 @@
         {
             "mark": {
                 "type": "arc",
-                "outerRadius": 160
+                "outerRadius": 120
             }
         },
         {
             "mark": {
                 "type": "text", 
-                "radius": 180,
-                "fontSize": 16
+                "radius": 155,
+                "fontSize": 14
             },
             "encoding": {
                 "text": {
@@ -52,8 +52,8 @@
         {
             "mark": {
                 "type": "text", 
-                "radius": 120,
-                "fontSize": 16
+                "radius": 90,
+                "fontSize": 14
             },
             "encoding": {
                 "text": {

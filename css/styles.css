@@ -1,21 +1,37 @@
 .page {
-    width: 1420px;
+    width: 1480px;
     background-color: #f9f0db;
     /* margin: auto */
-    padding: 50px;
+    padding: 20px;
     padding-top: 7px;
+}
+
+.pure-u-1-1 h1 {
+	padding-left: 10px; /* Adjust this value as needed */
+}
+
+.pure-u-1-1 p {
+	padding-left: 10px; /* Adjust this value as needed */
 }
 
 .vis-container {
     width: 100%;
+	padding-top: 17px;
 }
 
 .description-right {
-    padding-left: 20px;
+    padding-left: 5px;
 }
 
-.description-left {
+.description-top-left {
     padding-right: 20px;
+	padding-left: 10px;
+}
+
+.description-bottom-left {
+    padding-right: 20px;
+	padding-left: 10px;
+	margin-top: 0;
 }
 
 .pure-g {
