@@ -127,7 +127,7 @@
                     "type": "temporal",
                     "axis": {
                         "title": "Date",
-                        "titleFontSize": 15
+                        "titleFontSize": 14
                     }
                 },
                 "y": {
@@ -135,7 +135,7 @@
                     "type": "quantitative",
                     "axis": {
                         "title": "Dispensed Respiratory Prescriptions",
-                        "titleFontSize": 15
+                        "titleFontSize": 14
                     }
                 },
                 "color": {

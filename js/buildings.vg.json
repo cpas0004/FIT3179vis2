@@ -20,13 +20,20 @@
                     "field": "Category",
                     "type": "nominal",
                     "title": "Building Type",
-                    "axis": {"labelAngle": 0},
+                    "axis": {
+                        "labelAngle": 0,
+                        "titleFontSize": 14
+                    },
+                    
                     "sort": "descending"
                 },
                 "y": {
                     "field": "Value", 
                     "type": "quantitative",
-                    "title": "Number of Buildings"
+                    "title": "Number of Buildings",
+                    "axis": {
+                        "titleFontSize": 14
+                    }
                 },
                 "xOffset": {"field": "Group"},
                 "color": {
