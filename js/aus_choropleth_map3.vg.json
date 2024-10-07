@@ -17,7 +17,7 @@
           "min": 1, 
           "max": 50, 
           "step": 1, 
-          "name": "Top Fires: "}
+          "name": "Top Fires to Show: "}
         }
       ],
   "layer": [
@@ -108,7 +108,7 @@
         "tooltip": [
           {"field": "fire_name", "type": "nominal", "title": "Fire Name"},
           {"field": "rank", "type": "quantitative", "title": "Fire Rank"},
-          {"field": "area_km", "type": "quantitative", "title": "Fire Area in km^2"},
+          {"field": "area_km", "type": "quantitative", "title": "Fire Area in km^2", "format": ",d"},
           {"field": "ignition_date", "type": "temporal", "title": "Ignition Date"}
         ]
       }
