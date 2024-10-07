@@ -56,7 +56,7 @@
         "color": {
           "field": "% of State Damaged by Fires",
           "type": "quantitative",
-          "title": "%",
+          "title": "% of State Burned",
           "scale": {
             "type": "threshold",
             "domain": [0.01, 1, 5, 10],
@@ -102,7 +102,7 @@
           "field": "area_km",
           "type": "quantitative",
           "title": "Area in km^2",
-          "scale": {"domain": [100, 900, 4000]},
+          "scale": {"domain": [100, 1100, 5000]},
           "legend": {"title": "Area in km^2"}
         },
         "tooltip": [
