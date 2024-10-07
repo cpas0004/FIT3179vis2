@@ -7,6 +7,7 @@
     "width": 275,
     "height": 275,
     "background": "#f9f0db",
+    "config": {"font": "Rubik"},
     "data": {
         "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/buildings.csv",
         "format": {"type": "csv"}

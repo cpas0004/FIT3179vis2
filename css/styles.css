@@ -4,14 +4,17 @@
     /* margin: auto */
     padding: 20px;
     padding-top: 7px;
+	
 }
 
 .pure-u-1-1 h1 {
 	padding-left: 10px; /* Adjust this value as needed */
+	font-family: "Rubik", sans-serif;
 }
 
 .pure-u-1-1 h2 {
 	padding-left: 10px; /* Adjust this value as needed */
+	font-family: "Rubik", sans-serif;
 }
 
 .vis-container {
@@ -21,7 +24,7 @@
 
 .vis-container2 {
     width: 100%;
-	padding-top: 20px;
+	padding-top: 23px;
 }
 
 .description-right {
@@ -29,6 +32,7 @@
 	text-align: justify;
   	text-justify: inter-word;
 	line-height: 1.6;
+	font-family: "Rubik", sans-serif;
 }
 
 .description-top-left1 {
@@ -38,6 +42,7 @@
 	line-height: 1.6;
 	text-align: justify;
   	text-justify: inter-word;
+	font-family: "Rubik", sans-serif;
 	
 }
 
@@ -47,25 +52,27 @@
 	line-height: 1.6;
 	text-align: justify;
   	text-justify: inter-word;
+	font-family: "Rubik", sans-serif;
 }
 
 
 .description-bottom-left {
     padding-right: 20px;
 	padding-left: 10px;
-	padding-top: 6px;
+	padding-top: 0px;
 	text-align: justify;
   	text-justify: inter-word;
-	  line-height: 1.6;
+	line-height: 1.6;
+	font-family: "Rubik", sans-serif;
 }
 
 .description-bottom-right {
     padding-right: 20px;
 	padding-left: 15px;
-	margin-top: 0;
 	text-align: justify;
   	text-justify: inter-word;
-	  line-height: 1.6;
+	line-height: 1.6;
+	font-family: "Rubik", sans-serif;
 }
 
 .pure-g {

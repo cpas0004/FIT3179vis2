@@ -8,6 +8,7 @@
   "height": 500,
   "background": "#f9f0db",
   "projection": {"type": "mercator"},
+  "config": {"font": "Rubik"},
   "params": [
         {
           "name": "TopFires", 
@@ -60,7 +61,7 @@
           "scale": {
             "type": "threshold",
             "domain": [0.01, 1, 5, 10],
-            "range": ["#D3D3D3", "#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+            "range": ["#fba884", "#f8733a", "#c34007", "#943005", "#4a1803"]
           }
         },
         "tooltip": [
@@ -93,7 +94,7 @@
         {  "filter": "datum.rank <= TopFires"}
       ],
       "mark": { "type": "circle", 
-                "color": "#f8de17"
+                "color": "#e9d117"
       },
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},

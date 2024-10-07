@@ -7,6 +7,7 @@
     "width": 800,
     "height": 270,
     "background": "#f9f0db",
+    "config": {"font": "Rubik"},
     "data": {
         "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/dispensed.csv",
         "format": {"type": "csv", "parse": {"Date": "date:'%d/%m/%Y'"}}
