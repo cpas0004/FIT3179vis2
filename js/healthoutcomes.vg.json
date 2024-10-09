@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-        "text": "Dispensed respiratory medications per state during the 2019/20 bushfires",
+        "text": "Dispensed Respiratory Prescriptions per State During the 2019/20 Bushfires",
         "fontSize": 22
     },
     "width": 800,
@@ -30,7 +30,7 @@
             "as": "PeakDate"
         },
         {
-            "calculate": "datetime('2019-11-11')",
+            "calculate": "datetime('2019-11-10')",
             "as": "anno1X"
         },
         {
@@ -184,7 +184,7 @@
                     "type": "quantitative"
                 },
                 "text": {
-                    "value": "2019/20 Bushfire Season"
+                    "value": "2019/20 Fire Season"
                 }
             }
         },

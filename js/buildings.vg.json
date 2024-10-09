@@ -3,6 +3,7 @@
     "title": {
         "text": "NSW Buildings Damaged",
         "fontSize": 22,
+
         "dy": -28
     },
     "width": 275,

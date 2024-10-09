@@ -3,6 +3,7 @@
     "title": {
         "text": "Bushfire Ignitions Since 2000",
         "fontSize": 22,
+        "anchor": "start",
         "dy": -35
     },
     "width": 275,
