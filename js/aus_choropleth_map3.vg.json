@@ -7,20 +7,55 @@
   "width": 850,
   "height": 500,
   "background": "#f9f0db",
-  "projection": {"type": "mercator"},
+  "projection": {
+    "type": "mercator",
+    "center": {"expr": "center_to"},
+    "scale": {"expr": "zoom_level"}
+  },
   "config": {"font": "Rubik"},
   "params": [
         {
           "name": "TopFires", 
           "value":  50, 
           "bind": { 
-          "input": "range", 
-          "min": 1, 
-          "max": 50, 
-          "step": 1, 
-          "name": "Largest Fires to Display: "}
+            "input": "range", 
+            "min": 1, 
+            "max": 50, 
+            "step": 1, 
+            "name": "Largest Fires to Display: "
+          }
+        },
+        {
+          "name": "zoom_level",
+          "value": 700,
+          "bind": {
+            "input": "range",
+            "min": 700,
+            "max": 8000,
+            "step": 100,
+            "name": "Zoom: "
+          }
+        },
+        {
+          "name": "center_to",
+          "value": [134.68, -27.94],
+          "bind": {
+          "input": "select",
+          "options": [
+            [134.68, -25.94],
+          [145.03,-36.97],
+          [147.37,-32.54],
+          [144.92,-22.63],
+          [135.72,-30.52],
+          [123.11,-25.58],
+          [146.66,-42.09],
+          [149.04,-35.42]
+          ],
+          "labels": ["Entire Country", "Victoria", "New South Wales", "Queensland", "South Australia", "Western Australia", "Tasmania", "Australian Capital Territory"],
+          "name": "Map Centre: "
+          }
         }
-      ],
+  ],
   "layer": [
     {
       

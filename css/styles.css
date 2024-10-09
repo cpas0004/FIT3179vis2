@@ -87,7 +87,11 @@
 }
 
 .pure-g {
-    margin-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.pure-u-1-6 {
+    margin-bottom: 17px;
 }
 
 #choropleth_map {
