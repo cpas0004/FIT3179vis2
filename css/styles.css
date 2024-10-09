@@ -86,9 +86,9 @@
 	font-family: "Rubik", sans-serif;
 }
 
-/* .pure-g {
-    margin-bottom: 40px;
-} */
+.pure-g {
+    margin-bottom: 15px;
+}
 
 #choropleth_map {
 	top:10px;
@@ -118,8 +118,8 @@
 	right: 10px;
 }
 
-/* 
-input[type="range"] {
+
+/* input[type="range"] {
 	-webkit-appearance: none;
 	width: 100%;
 	background: #4a1803;
