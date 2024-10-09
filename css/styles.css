@@ -86,7 +86,7 @@
 #choropleth_map {
 	top:10px;
 	bottom: 10px; 
-	left: 10px;
+	padding-left: 30px;
 	right: 10px;
 }
 
