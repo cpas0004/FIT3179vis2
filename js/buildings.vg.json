@@ -2,7 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
         "text": "NSW Buildings Damaged",
-        "fontSize": 22
+        "fontSize": 22,
+        "dy": -28
     },
     "width": 275,
     "height": 275,
@@ -22,7 +23,8 @@
                     "title": "Building Type",
                     "axis": {
                         "labelAngle": 0,
-                        "titleFontSize": 14
+                        "titleFontSize": 14,
+                        "labelFontSize": 12
                     },
                     
                     "sort": "descending"
@@ -32,7 +34,8 @@
                     "type": "quantitative",
                     "title": "Number of Buildings",
                     "axis": {
-                        "titleFontSize": 14
+                        "titleFontSize": 14,
+                        "labelFontSize": 11
                     }
                 },
                 "xOffset": {"field": "Group"},

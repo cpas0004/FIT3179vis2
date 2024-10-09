@@ -127,7 +127,8 @@
                     "type": "temporal",
                     "axis": {
                         "title": "Date",
-                        "titleFontSize": 14
+                        "titleFontSize": 14,
+                        "labelFontSize": 11
                     }
                 },
                 "y": {
@@ -135,13 +136,14 @@
                     "type": "quantitative",
                     "axis": {
                         "title": "Dispensed Respiratory Prescriptions",
-                        "titleFontSize": 14
+                        "titleFontSize": 14,
+                        "labelFontSize": 11
                     }
                 },
                 "color": {
                     "field": "State",
                     "type": "nominal",
-                    "legend": {"title": "State"},
+                    "legend": {"title": "State", "titleFontSize": 16, "labelFontSize": 13},
                     "scale": {
                         "range": ["#c9462a", "#d2a665", "#652b22", "#90ae85",  "#fca404", "#a3512f", "#ac545c", "#414524"]
                     },

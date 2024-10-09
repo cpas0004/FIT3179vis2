@@ -7,14 +7,18 @@
 	
 }
 
-.pure-u-1-1 h1 {
+.title {
 	padding-left: 10px; /* Adjust this value as needed */
 	font-family: "Rubik", sans-serif;
+	font-size: 30px;
+	
 }
 
-.pure-u-1-1 h2 {
+.subtitle {
 	padding-left: 10px; /* Adjust this value as needed */
 	font-family: "Rubik", sans-serif;
+	font-size: 20px;
+	color: rgb(68, 68, 68); 
 }
 
 .vis-container {
@@ -84,8 +88,6 @@
 	bottom: 10px; 
 	left: 10px;
 	right: 10px;
-	/*height: 1000px;
-	width: 800px;*/
 }
 
 #respiratory_prescriptions {
@@ -109,3 +111,31 @@
 	right: 10px;
 }
 
+/* 
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 100%;
+	background: #4a1803;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	background: #ff0000; 
+	cursor: pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+	width: 15px;
+	height: 15px;
+	background: #ff0000; 
+	cursor: pointer;
+  } */
+
+
+
+input[type="range"] {
+margin-left: 20px; 
+}
