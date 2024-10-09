@@ -1,9 +1,8 @@
 .page {
     width: 1480px;
     background-color: #f9f0db;
-    /* margin: auto */
     padding: 20px;
-    padding-top: 7px;
+    padding-top: 0px;
 	
 }
 
@@ -11,7 +10,7 @@
 	padding-left: 10px; /* Adjust this value as needed */
 	font-family: "Rubik", sans-serif;
 	font-size: 30px;
-	
+	margin-bottom: 10px;
 }
 
 .subtitle {
@@ -19,11 +18,18 @@
 	font-family: "Rubik", sans-serif;
 	font-size: 20px;
 	color: rgb(68, 68, 68); 
+	margin-bottom: 10px;
 }
 
-.vis-container {
+
+.vis-container-top {
     width: 100%;
 	padding-top: 1px;
+}
+
+.vis-container-middle {
+    width: 100%;
+	padding-top: 64px;
 }
 
 .vis-container2 {
@@ -33,6 +39,7 @@
 
 .description-right {
     padding-right: 15px;
+	padding-top: 40px;
 	text-align: justify;
   	text-justify: inter-word;
 	line-height: 1.6;
@@ -79,9 +86,9 @@
 	font-family: "Rubik", sans-serif;
 }
 
-.pure-g {
+/* .pure-g {
     margin-bottom: 40px;
-}
+} */
 
 #choropleth_map {
 	top:10px;
