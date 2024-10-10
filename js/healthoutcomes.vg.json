@@ -2,7 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
         "text": "Dispensed Respiratory Prescriptions per State During the 2019/20 Bushfires",
-        "fontSize": 22
+        "fontSize": 22,
+        "dy": -20
     },
     "width": 800,
     "height": 270,
@@ -143,7 +144,7 @@
                 "color": {
                     "field": "State",
                     "type": "nominal",
-                    "legend": {"title": "State", "titleFontSize": 16, "labelFontSize": 13},
+                    "legend": {"title": "State", "titleFontSize": 16, "labelFontSize": 14},
                     "scale": {
                         "range": ["#c9462a", "#d2a665", "#652b22", "#90ae85",  "#fca404", "#a3512f", "#ac545c", "#414524"]
                     },
