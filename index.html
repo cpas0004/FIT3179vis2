@@ -85,6 +85,11 @@
 
     </div>
     
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="vis5" class="vis-container-long"></div>
+      </div>
+    </div>
 
     
     <div class="pure-g">
@@ -135,6 +140,7 @@
     var specVis2 = "js/healthoutcomes.vg.json";
     var specVis3 = "js/ignitions.vg.json";
     var specVis4 = "js/buildings2.vg.json";
+    var specVis5 = "js/firesperyear.vg.json";
 
     vegaEmbed('#choropleth_map', specVis1, { "actions": false }).then(function(result) {
     }).catch(console.error);
@@ -146,6 +152,9 @@
     }).catch(console.error);
 
     vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
     }).catch(console.error);
   </script>
 </body>

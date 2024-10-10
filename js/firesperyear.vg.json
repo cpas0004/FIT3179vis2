@@ -1,39 +1,50 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Number of Recorded Fires Per State Per Year",
+        "fontSize": 23,
+        "anchor": "start",
+        "dy": -28
+    },
+    "background": "#f9f0db",
+    "config": {"font": "Rubik"},
     "data": {
-      "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/6_advanced_examples/data/earthquake_lite.csv"
+      "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/firesperyeardata.csv"
     },
     "vconcat": [
       {
-        "width": 600,
+        "width": 1400,
         "height": 300,
-        "transform": [
-          {
-            "bin": {"step": 0.5, "extent": [5, 7]},
-            "field": "mag",
-            "as": "Magnitude"
-          }
-        ],
         "mark": "area",
         "encoding": {
           "x": {
-            "field": "time",
-            "timeUnit": "yearmonth",
+            "field": "year",
+            "type": "quantitative",
             "scale": {"domain": {"param": "time_brush"}},
             "axis": {"title": "", "tickCount": 5, "grid": false}
           },
-          "y": {"aggregate": "count", "title": "Count of Earthquakes"},
+          "y": {
+            "field": "fires",
+            "type": "quantitative",
+            "title": "Count of Fires",
+            "stack": "zero"
+          },
           "color": {
-            "field": "Magnitude",
+            "field": "state",
             "scale": {
-              "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#bd0026", "#7f0000"]
+              "range": ["#c9462a", "#d2a665", "#652b22", "#90ae85", "#fca404", "#a3512f", "#ac545c", "#414524"]
             },
-            "legend": {"values": [5, 5.5, 6, 6.5]}
+            "legend": {
+              "title": "State",
+              "titleFontSize": 16,
+              "labelFontSize": 14,
+              "orient": "top-left"
+            }
           }
         }
       },
       {
-        "width": 600,
+        "width": 1400,
         "height": 60,
         "mark": "line",
         "params": [
@@ -44,14 +55,15 @@
         ],
         "encoding": {
           "x": {
-            "field": "time",
-            "timeUnit": "yearmonth",
-            "axis": {"title": "", "format": "%Y"}
+            "field": "year",
+            "type": "quantitative",
+            "axis": {"title": ""}
           },
           "y": {
-            "aggregate": "count",
+            "field": "fires",
+            "aggregate": "sum",
             "axis": {"tickCount": 3, "grid": false},
-            "title": "Count"
+            "title": "Total Fires"
           }
         }
       }

@@ -37,6 +37,11 @@
 	padding-top: 23px;
 }
 
+.vis-container-long{
+	width: 100%;
+	padding-top: 1px;
+}
+
 .description-right {
     padding-right: 15px;
 	padding-top: 40px;
