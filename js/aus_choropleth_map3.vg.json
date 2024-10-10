@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "50 Largest Fires and % of States Burned in 2019/20 Bushfire Season",
-    "fontSize": 22     
+    "fontSize": 23     
   },
   "width": 850,
   "height": 500,

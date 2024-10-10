@@ -1,9 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-        "text": "NSW Buildings Damaged",
-        "fontSize": 22,
-
+        "text": "Buildings Damaged Per State",
+        "fontSize": 23,
+        "anchor": "start",
         "dy": -28
     },
     "width": 275,
@@ -11,9 +11,42 @@
     "background": "#f9f0db",
     "config": {"font": "Rubik"},
     "data": {
-        "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/buildings.csv",
+        "url": "https://raw.githubusercontent.com/cpas0004/FIT3179vis2/main/data/buildings2.csv",
         "format": {"type": "csv"}
     },
+    "params": [
+        {
+            "name": "StateSelection",
+            "value": "NSW",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "NSW",
+                    "VIC",
+                    "QLD",
+                    "SA",
+                    "WA",
+                    "TAS",
+                    "NT",
+                    "ACT"
+                ],
+                "labels": [
+                    "New South Wales",
+                    "Victoria",
+                    "Queensland",
+                    "South Australia",
+                    "Western Australia",
+                    "Tasmania",
+                    "Northern Territory",
+                    "Australian Capital Territory"
+                ],
+                "name": "Select State: "
+            }
+        }
+    ],
+    "transform": [
+        {  "filter": "datum.State == StateSelection"}
+    ],
     "layer": [
         {
             "mark": "bar",
