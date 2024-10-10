@@ -13,10 +13,7 @@
     integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google font
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> -->
+  <!-- Google font-->
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
   <!-- CSS file -->
@@ -29,7 +26,6 @@
 
   <div class="page">
 
-    <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
         <div class="title">
@@ -40,9 +36,7 @@
         </div>
       </div>
     </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
+    
     <div class="pure-g">
       <div class="pure-u-1-6", style="height: 550px;">
         <div class="description-top-left1">
@@ -70,9 +64,7 @@
         <div id="choropleth_map" class="vis-container-top"></div>
       </div>
     </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
+    
     <div class="pure-g">
       <div class="pure-u-2-3">
         <div id="healthoutcomes" class="vis-container-middle"></div>
@@ -92,9 +84,9 @@
       </div>
 
     </div>
-    <!-- end pure grid group -->
+    
 
-    <!-- pure grid group -->
+    
     <div class="pure-g">
       <div class="pure-u-1-4">
         <div class="description-bottom-left">
@@ -124,7 +116,7 @@
         </div>
       </div>
     </div>
-    <!-- end pure grid group -->
+    
 
     
 
@@ -136,7 +128,7 @@
     </div>
 
 
-  </div> <!-- end page -->
+  </div> 
 
   <script type="text/javascript">
     var specVis1 = "js/aus_choropleth_map3.vg.json";
@@ -148,15 +140,12 @@
     }).catch(console.error);
 
     vegaEmbed('#healthoutcomes', specVis2, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
     vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
     vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
 </body>
