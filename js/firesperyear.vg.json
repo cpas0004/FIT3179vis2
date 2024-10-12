@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-        "text": "Number of Recorded Fires Per State Per Year",
+        "text": "Number of Recorded Fires Per State Per Year Since 1965",
         "fontSize": 23,
         "anchor": "start",
         "dy": -28
@@ -16,24 +16,32 @@
         "width": 1400,
         "height": 300,
         "mark": "area",
+        
         "encoding": {
           "x": {
             "field": "year",
-            "type": "quantitative",
+            "type": "temporal", 
+            "timeUnit": "year",
             "scale": {"domain": {"param": "time_brush"}},
-            "axis": {"title": "", "tickCount": 5, "grid": false}
+            "axis": {"title": "",  "grid": false, "format": "%Y"}
           },
           "y": {
             "field": "fires",
             "type": "quantitative",
             "title": "Count of Fires",
-            "stack": "zero"
+            "stack": "zero",
+            "axis": {"titleFontSize": 14}
           },
           "color": {
             "field": "state",
             "scale": {
-              "range": ["#c9462a", "#d2a665", "#652b22", "#90ae85", "#fca404", "#a3512f", "#ac545c", "#414524"]
+              "range": ["#ac545c", "#c9462a", "#652b22", "#90ae85", "#d28260", "#d2a665", "#fca404"]
             },
+
+
+
+
+
             "legend": {
               "title": "State",
               "titleFontSize": 16,
@@ -46,7 +54,10 @@
       {
         "width": 1400,
         "height": 60,
-        "mark": "line",
+        "mark": {
+          "type": "line",
+          "color": "#a3512f" 
+        },
         "params": [
           {
             "name": "time_brush",
@@ -56,14 +67,15 @@
         "encoding": {
           "x": {
             "field": "year",
-            "type": "quantitative",
-            "axis": {"title": ""}
+            "type": "temporal", 
+            "timeUnit": "year",
+            "axis": {"title": "", "format": "%Y"}
           },
           "y": {
             "field": "fires",
             "aggregate": "sum",
-            "axis": {"tickCount": 3, "grid": false},
-            "title": "Total Fires"
+            "axis": null,
+            "title": ""
           }
         }
       }

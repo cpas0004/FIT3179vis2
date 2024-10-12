@@ -3,6 +3,7 @@
     "title": {
         "text": "Dispensed Respiratory Prescriptions per State During the 2019/20 Bushfires",
         "fontSize": 23,
+        "anchor": "start",
         "dy": -20
     },
     "width": 800,
@@ -146,7 +147,7 @@
                     "type": "nominal",
                     "legend": {"title": "State", "titleFontSize": 16, "labelFontSize": 14},
                     "scale": {
-                        "range": ["#c9462a", "#d2a665", "#652b22", "#90ae85",  "#fca404", "#a3512f", "#ac545c", "#414524"]
+                        "range": ["#c9462a", "#d2a665", "#652b22", "#90ae85",  "#fca404", "#d28260", "#ac545c", "#414524"]
                     },
                     "sort": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "ACT", "NT"]
                 },
