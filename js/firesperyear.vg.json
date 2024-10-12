@@ -37,11 +37,6 @@
             "scale": {
               "range": ["#ac545c", "#c9462a", "#652b22", "#90ae85", "#d28260", "#d2a665", "#fca404"]
             },
-
-
-
-
-
             "legend": {
               "title": "State",
               "titleFontSize": 16,
@@ -69,12 +64,16 @@
             "field": "year",
             "type": "temporal", 
             "timeUnit": "year",
-            "axis": {"title": "", "format": "%Y"}
+            "axis": {
+                "title": "Click and drag to view a smaller year range.", 
+                "format": "%Y",
+                "titleFontSize": 14
+            }
           },
           "y": {
             "field": "fires",
             "aggregate": "sum",
-            "axis": null,
+            "axis": "null",
             "title": ""
           }
         }
