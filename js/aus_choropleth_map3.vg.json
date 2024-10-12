@@ -96,7 +96,7 @@
           "scale": {
             "type": "threshold",
             "domain": [0.01, 1, 5, 10],
-            "range": ["#fba884", "#f8733a", "#c34007", "#943005", "#4a1803"]
+            "range": ["#848884", "#f8733a", "#c34007", "#943005", "#4a1803"]
           },
           "legend": {"title": "% Burned", "titleFontSize":14, "labelFontSize":12}
         },
