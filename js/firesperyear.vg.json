@@ -73,7 +73,7 @@
           "y": {
             "field": "fires",
             "aggregate": "sum",
-            "axis": "null",
+            "axis": null,
             "title": ""
           }
         }
